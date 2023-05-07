@@ -40,4 +40,9 @@ public class Course {
 
         return grade;
     }
+
+    // 기본적으로 해당 데이터를 가지고 있는 객체가 처리하도록 하는 것이 좋음.
+    public double multiplyCreditAndCourse() {
+        return credit * getGradeToNumber();
+    }
 }
