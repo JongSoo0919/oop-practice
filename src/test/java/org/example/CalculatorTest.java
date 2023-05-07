@@ -44,4 +44,12 @@ public class CalculatorTest {
                 arguments(4, "/", 2, 2)
         );
     }
+
+    @DisplayName("0으로는 나눌 수 없다.")
+    @Test
+    void calculateExceptionTest(){
+        assertThatCode(() -> Calculator.calculate(10, "/", 0))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("0으로는 나눌 수 없습니다.");
+    }
 }
